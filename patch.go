@@ -1,4 +1,3 @@
-go
 func (m *mknodUnix) Mknode(path string, major, minor int) error {
     if _, err := os.Stat(path); err == nil {
         m.logger.Infof("Skipping: %s already exists", path)
